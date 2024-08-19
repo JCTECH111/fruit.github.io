@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fruit Slicing Game</title>
+    <style>
+        body, html {
+            margin: 0;
+            overflow: hidden;
+            background-color: black;
+        }
+        canvas {
+            display: block;
+        }
+        .container{
+            display: flex;
+            gap: 1rem;
+            float: right;
+            width: 400px;
+            padding: 1rem;
+        }
+        section{
+            width: 100%;
+            display: flex;
+            gap: 1rem;
+            align-items: center;
+        }
+        .container div{
+            padding: 1rem;
+            border-radius: 10px;
+            align-items: center;
+            justify-content: center;
+            display: flex;
+            border:1px solid gray;
+            color: #fff;
+            font-size: 1.4rem;
+            font-weight: bold;
+        }
+        label{
+            color: #fff;
+        }
+        @media (max-width: 500px) {
+            .container {
+                width: 100%;
+                overflow: hidden;
+                float: none;position: relative;
+                top: 0.4rem;
+                font-size: 14px;
+            }
+            section{
+                width: auto;
+            }
+            .container div{
+                font-size: 14px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <section>
+            <label for="highScore"> High Score</label>
+            <div class="highScore" id="highScore"></div>
+        </section>
+        <section>
+            <label for="mainScore" > Current Score</label>
+            <div class="mainScore" id="mainScore"></div>
+        </section>
+    </div>
+    <canvas id="gameCanvas"></canvas>
+    <script src="./js/index.js"></script>
+    <script src="./js/alert.js"></script>
+    <script src="./js/disable_clicks.js"></script>
+</body>
+</html>
